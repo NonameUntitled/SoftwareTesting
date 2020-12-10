@@ -1,0 +1,107 @@
+{
+  "name": "anime-homework",
+  "version": "0.1.0",
+  "private": true,
+  "description": "README.md",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "jest",
+    "test:e2e": "npm run test:e2e:cypress && npm run test:e2e:playwright",
+    "lint": "vue-cli-service lint",
+    "test:e2e:cypress": "npx cypress run",
+    "test:e2e:playwright": "vue-cli-service test:e2e 'test/e2e/playwright/**/*.spec.js'"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@testing-library/vue": "^5.1.0",
+    "@types/jest": "^26.0.14",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/test-utils": "^1.0.4",
+    "babel-core": "^7.0.0-beta.3",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^7.0.0-beta.3",
+    "chai": "^4.1.2",
+    "cypress": "^5.3.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "jest": "^25.5.4",
+    "jest-environment-jsdom-fifteen": "^1.0.2",
+    "jest-playwright-preset": "^1.4.0",
+    "mock-http-server": "^1.4.2",
+    "msw": "^0.21.3",
+    "playwright": "^1.5.2",
+    "vue-cli-plugin-e2e-playwright": "~0.3.7",
+    "vue-jest": "^2.6.0",
+    "vue-router": "^2.5.3",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^2.6.1",
+    "webpack-bundle-analyzer": "^2.2.1",
+    "webpack-dev-middleware": "^1.10.0",
+    "webpack-hot-middleware": "^2.18.0",
+    "webpack-merge": "^4.1.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {},
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/test/e2e/playwright/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "mocha": true
+        }
+      }
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "modulePathIgnorePatterns": [
+      "e2e"
+    ],
+    "modulePaths": [
+      "<rootDir>/src",
+      "<rootDir>/node_modules"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    }
+  },
+  "_id": "anime-homework@0.1.0",
+  "readme": "README.md"
+}
