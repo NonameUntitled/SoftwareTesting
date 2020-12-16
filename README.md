@@ -15,6 +15,7 @@ node app.js
 ```
 
 ### Frontend
+Frontend server will listen `localhost:8080`
 Vue.js frontend. So, Vue.js is required
 
 Dependencies installation:
