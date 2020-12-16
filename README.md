@@ -29,13 +29,13 @@ npm run serve
 
 ### Frontend Tests
 
-There are three test configurations: unit, component, and e2e.
-In order to launch tests use following commands:
-- unit and component tests
+There are three test types: unit, component, and e2e.
+To launch there tests use following commands:
+- to launch both unit and component tests
 ```script
 npm run test:unit
 ```
-- e2e tests
+- to launch e2e tests
 ```script
 npm run test:e2e
 ```
