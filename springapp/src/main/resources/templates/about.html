@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>My Spring Application</title>
+</head>
+
+<body>
+
+<header th:insert="blocks/header :: header"></header>
+
+<div class="about-info">
+    <h1 class="message">Created by: Noname Untitled (Baikalov Vladimir)</h1>
+    <h1 class="message">Task: Homework 3 (Java Spring Application)</h1>
+    <h1 class="message">Well, I should've done more detailed info page</h1>
+    <h1 class="message">However, I am a real layabout</h1>
+</div>
+
+</body>
+
+</html>
+
+<style>
+    .about-info {
+        margin-top: 50px;
+        font-size: 200%;
+    }
+    .message {
+        font-family: sans-serif;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 200%;
+    }
+
+    a {
+        margin: 50px;
+    }
+</style>

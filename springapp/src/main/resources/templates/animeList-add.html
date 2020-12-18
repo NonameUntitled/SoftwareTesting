@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>My Spring Application</title>
+</head>
+
+<body>
+
+<header th:insert="blocks/header :: header"></header>
+
+<h1 class="message">Add New Anime</h1>
+
+<form action="/animeList/add" method="post">
+    <input type="text" name="animeName" placeholder="Enter Anime Name" class="message  mt-5">
+
+    <input type="text" name="imageUrl" placeholder="Enter Anime Image URL" class="message mt-5">
+
+    <button type="submit" class="btn btn-success mt-5 btn-message">Add New Anime</button>
+</form>
+
+</body>
+
+</html>
+
+<style>
+
+    input {
+        width: 30%;
+        margin-left: 35%;
+        margin-right: 35%
+    }
+
+    button {
+        width: 20%;
+        margin-left: 40%;
+        margin-right: 40%
+    }
+
+    .btn-message {
+        font-family: sans-serif;
+        text-align: center;
+        color: #ffffff;
+        font-size: 200%;
+    }
+
+    .message {
+        font-family: sans-serif;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 200%;
+    }
+
+    a {
+        margin: 50px;
+    }
+</style>

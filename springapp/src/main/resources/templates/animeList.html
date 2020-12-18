@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>My Spring Application</title>
+</head>
+
+<body>
+
+<header th:insert="blocks/header :: header"></header>
+
+<h1 class="message">Anime List</h1>
+
+<a class="message text-dark" href="/animeList/add">Add New Anime!</a>
+
+<div th:each="el : ${anime}" class="mt-2 alert anime-table">
+    <h3 th:text="${el.animeName}" class="message"></h3>
+    <img th:src="${el.imageUrl}" class="mt-2 pr-2 pb-2"/>
+</div>
+
+</body>
+
+</html>
+
+<style>
+    body {
+        align-content: center;
+        text-align: center;
+    }
+
+    img {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .anime-table {
+        border-radius: 25px;
+        border: 2px solid #000000;
+        padding: 20px;
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+
+    }
+
+    .message {
+        font-family: sans-serif;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 200%;
+    }
+
+    a {
+        margin: 50px;
+    }
+
+</style>
