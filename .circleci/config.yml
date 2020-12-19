@@ -19,7 +19,7 @@ jobs:
           command: npm --prefix ./client run test:unit    
       - run:
           name: Run Java Unit tests
-          command: cd ./springapp && mvnw.cmd test -Dtest=AnimeTests
+          command: cd ./springapp && ./mvnw test -Dtest=AnimeTests
 workflows:
   build_test:
     jobs:
