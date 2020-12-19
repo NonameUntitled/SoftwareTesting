@@ -7,6 +7,12 @@ jobs:
       - checkout
       - run:
           name: Move to client directory
+          command: ls -a
+      - run:
+          name: Move to client directory
+          command: pwd
+      - run:
+          name: Move to client directory
           command: cd ./client
       - run:
           name: Install npm dependencies
