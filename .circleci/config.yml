@@ -1,26 +1,26 @@
 version: 2.1
 jobs:
-  run_test:
+  run_client_test:
     docker:
       - image: circleci/node:10
     steps:
       - checkout
       - run:
-          name: Move to client directory
-          command: cd ./client
-      - run:
-          name: Pwd
-          command: pwd
-      - run:
           name: Install npm dependencies
           command: cd ./client && npm install --save
       - run:
-          name: Run unit tests
+          name: Run Client Unit tests
           command: npm --prefix ./client run test:unit    
+  run_spring_test:
+    docker: 
+      - image: circleci/maven@0.0.12
+    steps:
+      - checkout
       - run:
           name: Run Java Unit tests
-          command: cd ./springapp && mvn test -Dtest=AnimeTests
+          command: cd ./springapp && ./mvnw test -Dtest=AnimeTests
 workflows:
   build_test:
     jobs:
-      - run_test
+      - run_client_test
+      - run_spring_test
