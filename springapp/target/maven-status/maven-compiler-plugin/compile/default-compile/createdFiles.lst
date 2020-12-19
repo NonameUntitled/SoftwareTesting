@@ -1,0 +1,5 @@
+ru\itmo\springapp\model\Anime.class
+ru\itmo\springapp\controllers\AnimeController.class
+ru\itmo\springapp\repositories\AnimeRepository.class
+ru\itmo\springapp\SpringappApplication.class
+ru\itmo\springapp\controllers\MainController.class

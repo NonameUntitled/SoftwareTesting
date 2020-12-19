@@ -14,10 +14,6 @@
 	<name>springapp</name>
 	<description>Spring application for software testing course</description>
 
-	<properties>
-		<java.version>15</java.version>
-	</properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

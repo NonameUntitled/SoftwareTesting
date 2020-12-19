@@ -3,9 +3,11 @@ package ru.itmo.springapp.springapp;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Transactional
@@ -40,9 +42,10 @@ public class SpringAppE2ETests {
 
         driver.findElements(By.xpath("//*[contains(text(), 'Add')]")).get(1).click();
 
+
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        var elementsList = driver.findElements(By.xpath("//*[contains(text(), 'My New Anime')]"));
+        List<WebElement> elementsList = driver.findElements(By.xpath("//*[contains(text(), 'My New Anime')]"));
 
         Assertions.assertTrue(elementsList.size() > 0);
     }
