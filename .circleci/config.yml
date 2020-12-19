@@ -14,8 +14,6 @@ jobs:
           name: Run Client Unit tests
           command: npm --prefix ./client run test:unit    
   run_spring_test:
-    docker: 
-      - image: circleci/maven@0.0.12
     steps:
       - checkout
       - run:
