@@ -20,6 +20,9 @@ jobs:
       - checkout
       - run:
           name: Run Java Unit tests
+          command: cd ./springapp && chmod +x mvnw
+      - run:
+          name: Run Java Unit tests
           command: cd ./springapp && ./mvnw test -Dtest=AnimeTests
 workflows:
   build_test:
